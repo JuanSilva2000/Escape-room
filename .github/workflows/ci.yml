@@ -26,7 +26,7 @@ jobs:
         run: npm install
 
       - name: Build Docker image
-        run: docker build -t CC3S2---Proyecto-5 .
+        run: docker build -t cc3s2---proyecto-5 .
 
       # Corre los tests
       - name: Run tests
