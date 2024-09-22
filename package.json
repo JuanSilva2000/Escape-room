@@ -1,0 +1,17 @@
+{
+  "name": "pc1-software",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
