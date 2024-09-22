@@ -37,5 +37,5 @@ jobs:
         run: npm audit --audit-level=high
 
       - name: Run docker container
-        run: docker run -d -p 3000:3000 CC3S2---Proyecto-5
+        run: docker run -d -p 3000:3000 cc3s2---proyecto-5
 
