@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "${APP_PORT:-3000}:3000"  # Usa la variable APP_PORT o 3000 por defecto
+    environment:
+      - NODE_ENV=production  # NODE_ENV puede ser development o production
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "${PROMETHEUS_PORT:-9090}:9090"  # Usa la variable PROMETHEUS_PORT o 9090 por defecto
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "${GRAFANA_PORT:-3100}:3000"  # Usa la variable GRAFANA_PORT o 3100 por defecto
+
