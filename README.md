@@ -1,6 +1,34 @@
 # Informe acerca de el trabajo realizado
 Vamos a desarrollar un juego de "Esacape ROOM" donde los jugadores deben resolver una serie de acertijos para escapar de un habitación virtual
-El juego consiste en habitaciones secuenciales, donde vamos a ir agregando paso a paso cada funcionalidad
+El juego consiste en habitaciones secuenciales, donde vamos a ir agregando paso a paso cada funcionalidad  
+  
+# Division de Responsabilidades
+**Manuel Ravichagua**: Encargado de crear las vistas y el script para el consumo de las apis.  
+  
+Ramas usadas:  
+- **feature-view**: Se implementa la interfaz en html y css para que el juagdor pueda digitar los comandos e interactuar con el juego.  
+  
+- **feature-script**: Se implementa un script.js que sirve consumir las apis que brinda información como el número de habitación en que está el jugador y el acertijo, además de hacer un request a la api enviandole el comando digitado por el jugador para que la api lo procese.  
+  
+**Juan Silva**: Encargado del backend y construccion de la api.  
+  
+Ramas usadas:  
+- **feature-data**: rama que crea un objeto donde están todos los acertijos y pistas además de funciones que interactuan con esos datos.  
+  
+- **feature-api**: rama que crea las apis con dos endpoints encargados de responder a las solicitudes del frontend.  
+  
+**Diego Quispe**: Encargado de la infraestructura.  
+
+Ramas usadas 
+- **main**: Se implenta el workflow (archivo yml) para el CI/CD, junto con los archivos de dockerfile, promethues y grafana.
+  
+![](img/doc-1.png)  
+  
+    
+# Flujo de trabajo  
+Se hizo el desarrollo basado en troncales:   
+  
+# Cómo inicia la app:
 
 # Infraestructura
 
