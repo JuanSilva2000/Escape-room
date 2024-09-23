@@ -2,7 +2,55 @@
 Vamos a desarrollar un juego de "Esacape ROOM" donde los jugadores deben resolver una serie de acertijos para escapar de un habitación virtual
 El juego consiste en habitaciones secuenciales, donde vamos a ir agregando paso a paso cada funcionalidad
 
-# Configuración de CI.yml
+# Infraestructura
+
+## 1: Implementación `ci.yml`
+![](img/ci.png)
+
+El archivo `ci.yml` configura el pipeline de integración continua (CI) para el proyecto. Este pipeline se ejecuta automáticamente cada vez que hay un commit en la rama `main`. Está diseñado para correr en una máquina virtual Ubuntu mediante GitHub Actions y realizar una serie de pasos automatizados.
+
+### Explicación:
+- **Configuración del evento**: El pipeline se activa con el evento `push` en la rama `main`, asegurando que solo los cambios en esta rama desencadenen la integración continua.
+- **Configuración de Node.js**: El entorno se configura para usar la versión 18 de Node.js, lo cual es crucial para garantizar la compatibilidad del código con una versión específica del entorno de ejecución.
+- **Instalación de dependencias**: El paso `npm install` se encarga de instalar todas las dependencias definidas en el archivo `package.json`, asegurando que el entorno del pipeline tenga todos los módulos necesarios.
+- **Construcción de la imagen Docker**: El pipeline luego construye una imagen Docker basada en el `Dockerfile` presente en el proyecto. Esto garantiza que la aplicación se pueda ejecutar de forma consistente en diferentes entornos.
+- **Ejecución de tests**: El paso `npm test` asegura que todos los tests definidos se ejecuten, validando que la aplicación esté funcionando correctamente.
+- **Auditoría de seguridad**: `npm audit` revisa las vulnerabilidades en las dependencias, asegurando que el proyecto esté protegido contra posibles riesgos de seguridad.
+- **Despliegue del contenedor Docker**: Finalmente, se levanta un contenedor Docker con la aplicación escuchando en el puerto 3000.
+
+## 2: Implementación `Dockerfile`
+![](img/Dockerfile.png)
+
+El `Dockerfile` define el entorno de Docker para el proyecto. Aquí se especifican las instrucciones necesarias para construir una imagen Docker que contenga la aplicación.
+
+### Explicación:
+- **Base de imagen**: La imagen base es `node:18`, que incluye Node.js en su versión 18. Esto asegura que la aplicación se ejecute en un entorno Node.js de última generación.
+- **Directorio de trabajo**: El comando `WORKDIR /app` define el directorio dentro del contenedor donde se ubicará la aplicación.
+- **Copia de dependencias**: Se copian los archivos `package*.json` al contenedor, y luego se ejecuta `npm install` para instalar las dependencias de la aplicación.
+- **Copia del código fuente**: El comando `COPY . .` copia el código fuente completo desde el directorio del host al contenedor.
+- **Exposición del puerto**: `EXPOSE 3000` asegura que el contenedor escuche en el puerto 3000, permitiendo que la aplicación sea accesible.
+- **Comando de inicio**: Finalmente, se especifica que la aplicación debe iniciarse ejecutando `node src/app.js` cuando el contenedor esté en funcionamiento.
+
+## 3: Implementación `docker-compose.yml`
+![](img/docker-compose.png)
+
+El archivo `docker-compose.yml` se utiliza para orquestar múltiples servicios Docker en un entorno de contenedores, incluyendo la aplicación Node.js, Prometheus para monitoreo, y Grafana para visualización de métricas.
+
+### Explicación:
+- **Definición del servicio `app`**: Este servicio construye la imagen de la aplicación utilizando el `Dockerfile` y expone el puerto 3000 (o el que esté definido por la variable de entorno `APP_PORT`). Además, se define la variable de entorno `NODE_ENV` que puede configurarse como `production` o `development` dependiendo del entorno.
+- **Servicio `prometheus`**: Prometheus es un sistema de monitoreo que recopila métricas de la aplicación. El volumen monta el archivo `prometheus.yml` desde el sistema de archivos del host para configurar las tareas de monitoreo. El puerto 9090 es expuesto para acceder a la interfaz web de Prometheus.
+- **Servicio `grafana`**: Grafana es una herramienta de visualización de métricas que se ejecuta en el puerto 3000 (o 3100 si se usa la variable de entorno `GRAFANA_PORT`). Grafana permite crear paneles interactivos para visualizar los datos recolectados por Prometheus.
+
+## 4: Implementación `prometheus.yml`
+![](img/Prometheus.png)
+
+El archivo `prometheus.yml` define las configuraciones para que Prometheus pueda realizar scraping de métricas desde la aplicación Node.js.
+
+### Explicación:
+- **Intervalo global de scraping**: El valor `scrape_interval` se define en 15 segundos, lo que significa que Prometheus recopilará métricas cada 15 segundos.
+- **Configuración de scraping para la aplicación Node.js**: Se define un job llamado `node-app` con un target estático que apunta a `app:3000`, es decir, el servicio de la aplicación en Docker, que expone sus métricas en el puerto 3000. Prometheus usará esta configuración para recolectar métricas y almacenarlas para visualización y análisis.
+
+
   
     
 # BACKEND  
