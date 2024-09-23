@@ -1,5 +1,4 @@
-# PARTE 2:  
-## 1. Resolución de acertijos mediante la API REST 
+# API
 El archivo app configuramos los middleware, y lo lanzamos en el puerto 3000, además montamos un conjunto de rutas bajo el prefijo api (ver linea 11 de la imágen)
 ![](img/src-1.png)  
 
