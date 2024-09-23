@@ -1,9 +1,17 @@
 FROM node:18
-WORKDIR /usr/src/app
+
+# Crear el directorio de la aplicación dentro del contenedor
+WORKDIR /app
+
+# Copiar los archivos de la carpeta raíz al contenedor
 COPY package*.json ./
+
+# Instalar las dependencias del proyecto
 RUN npm install
+
+# Copiar todo el código de la aplicación al contenedor
 COPY . .
-WORKDIR /usr/src/app/src
 EXPOSE 3000
+# Especificar el comando que se ejecutará cuando inicie el contenedor
 CMD ["node", "src/app.js"]
 
