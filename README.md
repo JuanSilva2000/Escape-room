@@ -13,5 +13,6 @@ Hemos visto que se uso ciertas funciones como `getHabitacionActual()`
 En data.js tenemos un objeto donde almacena cada habitación y su respectivo acertijo, entonces esta función retorna un objeto con la habitación y acertijo
 ![](img/data_func-1.png)    
   
-El 2do endpoint usa la función `procesarComando()` lo que hace es tomar el comando como parametro y enviar un mensaje respectivo para que en el frontend lo muestere como alert
+El 2do endpoint usa la función `procesarComando()` lo que hace es tomar el comando como parametro y enviar un mensaje respectivo para que en el frontend lo muestere como alert  
+
 ![](img/data_func-2.png)  
