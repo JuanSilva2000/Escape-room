@@ -28,8 +28,18 @@ Ramas usadas
 # Flujo de trabajo  
 Se hizo el desarrollo basado en troncales:   
   
-# Cómo inicia la app:
+# Cómo iniciar la app:
+Para poder iniciar la aplicación debemos clonar el repositorio de nuestra aplicación para esto haremos el siguiente paso
 
+`git clone https://github.com/JuanSilva2000/CC3S2---Proyecto-5.git`
+
+Luego en la carpeta del proyecto vamos abrir la terminal y lanzamos todos los contenedores con el siguiente comando
+
+`sudo docker-compose up --build`
+
+Finalmente vamos a dirigirnos a nuestro navegador para poder correr nuestra aplicacion
+
+`http://localhost:3000`
 # Infraestructura
 
 ## 1: Implementación `ci.yml`
