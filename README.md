@@ -65,7 +65,7 @@ El 2do endpoint usa la función `procesarComando()` lo que hace es tomar el coma
   
 ## 3. Dockerización del juego de escape room  
 Para la parte de docker, creamos un dockerfile de tal forma que se pueda construir la imagen
-![](img/docker-file.png)  
+![](img/Dockerfile.png)  
   
 Además se creo un docker-compose para la creacion de 3 contenedores de manera automática, una para la app, prometheus y para grafana
 ![](img/docker-compose.png)  
