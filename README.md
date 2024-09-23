@@ -40,6 +40,7 @@ Luego en la carpeta del proyecto vamos abrir la terminal y lanzamos todos los co
 Finalmente vamos a dirigirnos a nuestro navegador para poder correr nuestra aplicacion
 
 `http://localhost:3000`
+
 # Infraestructura
 
 ## 1: Implementación `ci.yml`
@@ -89,7 +90,6 @@ El archivo `prometheus.yml` define las configuraciones para que Prometheus pueda
 - **Configuración de scraping para la aplicación Node.js**: Se define un job llamado `node-app` con un target estático que apunta a `app:3000`, es decir, el servicio de la aplicación en Docker, que expone sus métricas en el puerto 3000. Prometheus usará esta configuración para recolectar métricas y almacenarlas para visualización y análisis.
 
     
-# Configuración de CI.yml
 
 # FRONTEND
 ## 1: Módulo Public
