@@ -50,9 +50,54 @@ El archivo `prometheus.yml` define las configuraciones para que Prometheus pueda
 - **Intervalo global de scraping**: El valor `scrape_interval` se define en 15 segundos, lo que significa que Prometheus recopilará métricas cada 15 segundos.
 - **Configuración de scraping para la aplicación Node.js**: Se define un job llamado `node-app` con un target estático que apunta a `app:3000`, es decir, el servicio de la aplicación en Docker, que expone sus métricas en el puerto 3000. Prometheus usará esta configuración para recolectar métricas y almacenarlas para visualización y análisis.
 
-
-  
     
+# Configuración de CI.yml
+
+# FRONTEND
+## 1: Módulo Public
+Este archivo HTML contiene el prototipo de la página principal de nuestro juego dado una plantilla generica de un simple juego de preguntas, seguido de dos directorios almacenando un archivo css y un script.
+![](img/index.png)
+
+Se puede ver la logica de como adquirimos la respuesta a la pregunta realizada para el usuario y guardandolo en un objeto `comando-input`.
+![](img/comando-input.png)
+
+Asimismo la actualizacion del Frontend, de manera como realiza correcta o incorrectamente las respuestas del jugador, tal objeto que nos señala `numero-hab`.
+![](img/numero-hab.png)
+
+## 2: Submódulo CSS
+Aqui obtenemos el diseño del Frontend para una mayor visualizacion e interaccion con el jugador.
+![](img/css.png)
+
+No hay mucho que comentar de una plantilla de diseño donde es subjetivo.
+
+## 3: Submódulo JS
+Aqui implementamos un codigo en JavaScript que interactua con la API para actualizar nuestra pagina web del juego.
+![](img/script.png)
+
+Utilizamos la funcion `fetch` para hacer solicitudes a un servidor y manejar respuestas, como `fecth('api/habitacion')` hace una solicitud GET para obtener de la API la informacion de la habitacion actual y el acertijo, asi la funcion resuelve la `Promise` convierte la respuesta en formato JSON.
+
+![](img/getHabitacion.png)
+
+
+Capturamos la respuesta introducida por el jugador dado la siguiente linea.  
+`const input_comando = document.getElementById("comando-input");`  
+
+Añadimos un `listener` para el evento de `keydown` de la respuesta antes guardada, asi cada vez que una tecla (en este caso `Enter`) sea presionada se ejecute la funcion propocionada.  
+
+Realiza una solicitud POST a la URL dada, procesa la respuesta y suelta una alerta de exito o de fracaso. 
+Tambien actualizamos como anteriormente mencionamos con un `fecth` mediante una solicitud GET para la nueva informacion del juego y finalmente limpiamos el campo de entrada.
+![](img/listener.png)
+
+## 4: Módulo Test
+Para el testeo usaremos `jest` y una dependencia llamada `jest-fetch-mock`, utilizaremos un mock de fecth para que nos ayude a definir respuestas que nos devolvera la API al hacer una solicitud con el metodo `enableMocks()`.   
+La instalación de esta dependecia se hace mendiante:  
+```
+    npm install jest-fetch-mock
+```
+
+El test es para ver si cuando se hace una solicitud a traves de `fecth()` dado el numero de habitacion y el correspodiente acertijo, devuelva mediante otro `fecth()` de una solicitud GET, devuelva el correcto numero de habitacion donde esta el jugador y el correspodiente acertijo de la habitacion.
+![](img/script-test.png)
+
 # BACKEND  
   
 ## 1: Módulo Data  
