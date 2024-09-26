@@ -61,6 +61,10 @@ En data.js tenemos un objeto donde almacena cada habitación y su respectivo ace
 El 2do endpoint usa la función `procesarComando()` lo que hace es tomar el comando como parametro dependiendo de eso envía un mensaje para que en el frontend lo muestere como alert.  
 
 ![](img/data_func-2.png)  
+
+## 2. Monitorización del desempeño de los jugadores
+
+Para este caso nos hemos apoyado de prometheus y de grafana para poder monitoreas 
   
   
 ## 3. Dockerización del juego de escape room  
