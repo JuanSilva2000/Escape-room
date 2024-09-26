@@ -1,6 +1,9 @@
 global:
   scrape_interval: 15s
+
 scrape_configs:
   - job_name: 'node-app'
     static_configs:
-      - targets: ['app:3000']
+      - targets: ['app:3000']  # Tu aplicación Node.js
+    metrics_path: '/metrics'  # Ruta para recolectar métricas
+

@@ -21,13 +21,15 @@ Ramas usadas:
 
 Ramas usadas 
 - **main**: Se implenta el workflow (archivo yml) para el CI/CD, junto con los archivos de dockerfile, promethues y grafana.
+
+- **feature-prometheus**: Se implementa una nueva funcionalidad la cual ayuda a monitorizar la cantidad de veces que la persona ingresa a las habitaciones.
   
 ![](img/doc-1.png)  
   
     
 # Flujo de trabajo  
 Se hizo el desarrollo basado en troncales:   
-![](img/flujo.png)
+![](img/flujo1.png)
   
 # Cómo iniciar la app:
 Para poder iniciar la aplicación debemos clonar el repositorio de nuestra aplicación para esto haremos el siguiente paso
@@ -64,9 +66,24 @@ El 2do endpoint usa la función `procesarComando()` lo que hace es tomar el coma
 
 ## 2. Monitorización del desempeño de los jugadores
 
-Para este caso nos hemos apoyado de prometheus y de grafana para poder monitoreas 
-  
-  
+Para este caso nos hemos apoyado de prometheus y de grafana para poder monitorear, todos estos cambios se hicieron en la rama feature-prometheus el cual se hizo para poder desarrollar esta nueva funcionalidad para luego hacer un main en la principal. La métrica que implementamos es cuantas veces ingresamos a la habitación, para esto se procedio a cambiar las siguientes clases
+
+routes.js
+
+![](img/feature-prometehuse-1.png) 
+
+ app.js
+
+ ![](img/feature-prometheus-2.png) 
+
+ y el prometheus.yml el cual va a recoger estar métricas mediante el endpoint establecido
+
+ ![](img/feature-prometheus-3.png)
+
+
+Luego al volver a correr nuestro contenedor podemos observar que las métrica se estan recogiendo de manera éxitosa
+
+![](img/feature-prometheus-4.png)
 ## 3. Dockerización del juego de escape room  
 Para la parte de docker, creamos un dockerfile de tal forma que se pueda construir la imagen
 ![](img/Dockerfile.png)  
