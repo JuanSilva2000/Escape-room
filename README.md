@@ -257,3 +257,26 @@ La instalación de esta dependecia se hace mendiante:
 2. El segundo test es para verificar que se muestra el mensaje de "Respuesta correcta" cuando se responde bien al acertijo, el fecth se hace con un método POST pues con este se envía datos al servidor (api), en este caso es el comando, como por defecto primero se tiene el primer acertijo entonces al responder con `pera` debería mostrarse el mensaje de respuesta correcta, y eso lo verifica el test:  
   
 ![](img/test-backend-2.png)
+
+# JUGABILIDAD
+## Juego - Interfaz
+Veremos al iniciar el proyecto, tendremos la interfaz completa para poder jugar y recibir respuestas.
+![](img/Interfaz-Juego.png)  
+
+Con el respectivo numero de habitacion y para recibir la respuesta del acertijo propuesto. Podemos responder de diferentes maneras para poder ver la funcionalidad y la respuesta de nuestro juego.
+
+### Respuesta Correcta
+Veremos que saldra un resultado si respondemos de manera correta al acertijo, avanzaras a la siguiente habitacion con un acertijo nuevo y desafiante.
+![](img/RespuestaCorrecta.png)
+
+### Respuesta Incorrecta
+Veremos que nos responde con el siguiente mensaje, limpia la consola para la nueva respuesta.
+![](img/RespuestaIncorrecta.png)
+
+### Ver Pista
+Implementamos un comodin para cada acertijo donde podras tener una descripcion no tan cercana a la respuesta.
+![](img/VerPista.png)
+
+### Fin del Juego
+Finalmente, al responder correctamente todas las respuesta, obtendras un mensaje que has escapado exitosamente de las habitaciones.
+![](img/FinJuego.png)
