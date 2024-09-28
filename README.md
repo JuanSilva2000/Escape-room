@@ -275,6 +275,8 @@ Veremos que nos responde con el siguiente mensaje, limpia la consola para la nue
 
 ### Ver Pista
 Implementamos un comodin para cada acertijo donde podras tener una descripcion no tan cercana a la respuesta.
+Primero tendras que escribir `ver pista` para esta opcion.
+![](img/ComandoPista.png)
 ![](img/VerPista.png)
 
 ### Fin del Juego
