@@ -19,7 +19,32 @@
   <div id="terminal">
     <input type="text" id="comando-input" placeholder="> Escribe el comando aquí..." autofocus>
   </div>
+
+  <button id = "ayuda">AYUDA</button>
+
+  <div id="comandos-lista" style ="display: none;">
+    <ul>
+      <li>'ver pista': Puedes solicitar una pista con la siguiente respuesta.</li>
+      <li>Despues de responder correctamente, presione 'Enter' para continuar.</li>
+    </ul>
+  </div>
+
   <script src="/js/script.js"></script>
+
+  <script>
+    const ayudaBoton = document.getElementById('ayuda');
+    const comandoLista = document.getElementById('comandos-lista');
+
+    ayudaBoton.addEventListener('mouseenter', function () {
+      comandoLista.style.display = 'block';
+    });
+
+    ayudaBoton.addEventListener('mouseleave', function () {
+      comandoLista.style.display = 'none';
+    });
+
+  </script>
+
 </body>
 
 </html>

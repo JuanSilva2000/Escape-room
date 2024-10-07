@@ -40,3 +40,44 @@ input::placeholder {
 #terminal {
     margin-top: 20px;
 }
+
+#ayuda {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: rgba(0, 128, 0, 0.9);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#ayuda:hover {
+  background-color: #0056b3;
+}
+
+#comandos-lista {
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 10;
+  width: 250px;
+  text-align: left;
+}
+
+#comados-lista ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#comandos-lista li{
+  margin-bottom: 10px;
+}
