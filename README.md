@@ -22,6 +22,8 @@ Se hizo la definición de las historias de usuario del proyecto, y se les califi
 |   Mensaje de bienvenida al jugador  | Como jugador Quiero ver una mensaje de bienvenida al iniciar el juego Para sentirme recibido y saber que el juego ha comenzado correctamente | P2 | XS | 2 | En proceso | Quispe |
 |      Cambiar el color de fondo      | Como jugador Quiero que el color de fondo cambie cada vez que entro en una nueva habitación Para hacer más visual y distintiva cada habitación en el juego | P2 | M | 2 | En proceso | Quispe |  
 |      Configuración y Exposición de Métricas para Prometheus      | Como administrador del sistema Quiero exponer métricas de mi aplicacion Node.js Para monitorear el rendimiento de la aplicación usando Prometheus | P0 | M | 3 | Hecho | Quispe |
+|      Dashboard en Grafana para Monitoreo     | Como administrador del sistema Quiero tener un dashboard en Grafana Para visualizar y monitorear las métricas de mi aplicación | P1 | S | 2 | Hecho | Quispe |
+|      Implementación de Docker Compose para la Automatización de Servicios     | Como administrador del sistema Quiero automatizar el despliegue de todos los servicios necesarios para la aplicación Para garantizar que la aplicación, junto con Prometheus y Grafana, se ejecuten de manera consistente y escalable en diferentes entornos | P0 | M | 4 | Hecho | Quispe |
 
   
 #### Planificación y organización de Sprints  
