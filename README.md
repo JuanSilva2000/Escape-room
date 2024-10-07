@@ -5,7 +5,7 @@ Modificamos el `index.html` para poder implementar la logica y un script, asi po
 
 Se muestra con el siguiente codigo, la implementacion del boton.  
 
-
+```js
     const ayudaBoton = document.getElementById('ayuda');
     const comandoLista = document.getElementById('comandos-lista');
 
@@ -16,11 +16,11 @@ Se muestra con el siguiente codigo, la implementacion del boton.
     ayudaBoton.addEventListener('mouseleave', function () {
       comandoLista.style.display = 'none';
     });
-
+```
 
 Y con su respectivo modelo y visualizacion en nuestro archivo de diseños.  
 
-
+```css
     #ayuda {
         position: fixed;
         bottom: 20px;
@@ -33,5 +33,5 @@ Y con su respectivo modelo y visualizacion en nuestro archivo de diseños.
         cursor: pointer;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
-
+```
 
