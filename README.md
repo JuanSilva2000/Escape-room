@@ -1,3 +1,67 @@
+# PC2 - INFORME  
+## Github, Scrum (Parte 1):  
+Se creo un tablero kanban con el nombre de Escape - Room:  
+  
+![](img/PC2/tablero.png)
+  
+Además se creo una plantillas de issues en GitHub para estandarizar la creación de historias de usuario, descripción y criterios de aceptación, la plantilla tiene la siguiente estructura:  
+  
+![](img/PC2/HU-template.png)  
+  
+Se hizo la definición de las historias de usuario del proyecto, y se les calificó en base a tu prioridad, tamaño (complejidad: XS,S,M,L,XL) y el estimado (valor numérico), la siguiente tabla muestra los detalles: 
+
+| Nombre del HU                       | Descripción del HU | Prioridad | Tamaño | Esfuerzo Estimado | Estado | Encargado |
+| :---------------------------------: | :----------------: | :-------: | :----: | :---------------: | :----: | :-------: |  
+|           Mostrar Acertijo          | Como jugador Quiero ver el acertijo de la habitación actual Para poder resolverlo | P0 | M | 5 | Hecho | Silva y Ravichagua |
+|           Digitar Respuesta         | Como jugador Quiero digitar mi respuesta Para verificar si es correcta | P0 | M | 4 | Hecho | Silva y Ravichagua |
+|    Respuesta Correcta de Acertijo   | Como jugador Quiero recibir una respuesta al acertar y avanzar a la siguiente habitación Para seguir progresando en el juego | P0 | M | 4 | Hecho | Silva y Ravichagua | 
+|            Recibir Pista            | Como jugador Quiero recibir una pista cuando la solicite Para resolver el acertijo | P0 | M | 4 | Hecho | Silva y Ravichagua |
+| Notificacion a Respuesta Incorrecta | Como jugador Quiero recibir un mensaje de error cuando mi respuesta es incorrecta Para saber que debo intentarlo nuevamente | P0 | M | 3 | Hecho | Ravichagua |
+| Configuración y Exposición de Métricas para Prometheus | Como administrador del sistema Quiero exponer métricas de mi aplicacion Node.js Para monitorear el rendimiento de la aplicación usando Prometheus | P0 | M | 5 | Hecho | Quispe |  
+| Dashboard en Grafana para Monitoreo | Como administrador del sistema Quiero tener un dashboard en Grafana Para visualizar y monitorear las métricas de mi aplicación | P1 | S | 2 | Hecho | Quispe |  
+| Implementación de Docker-compose | Como administrador del sistema Quiero automatizar el despliegue de todos los servicios necesarios para la aplicación Para garantizar que la aplicación, junto con Prometheus y Grafana, se ejecuten de manera consistente y escalable en diferentes entornos | P0 | M | 4 | Hecho | Quispe |
+|       Agregar un botón de ayuda     | Como jugador Quiero tener acceso a un botón que explique qué comandos puedo usar Para saber cómo interactuar correctamente con el juego | P1 | S | 2 | En proceso | Ravichagua |
+|          Agregar cronómetro         | Como jugador Quiero tener un límite de tiempo para resolver cada acertijo Para que el juego sea más desafiante | P1 | XL | 7 | En proceso | Silva y Ravichagua |
+|   Mensaje de bienvenida al jugador  | Como jugador Quiero ver una mensaje de bienvenida al iniciar el juego Para sentirme recibido y saber que el juego ha comenzado correctamente | P2 | XS | 2 | En proceso | Quispe |
+|      Cambiar el color de fondo      | Como jugador Quiero que el color de fondo cambie cada vez que entro en una nueva habitación Para hacer más visual y distintiva cada habitación en el juego | P2 | M | 2 | En proceso | Quispe |  
+    
+#### Planificación y organización de Sprints  
+Se decidió que el Proyecto se ha dividio en 3 sprints:  
+## *Sprint 1*:  
+1. Mostrar Acertijo  
+2. Digitar Respuesta.
+3. Respuesta Correcta de Acertijo.
+4. Recibir Pista.
+5. Notificacion a Respuesta Incorrecta. 
+6. Implementación de Docker-compose. 
+7. Configuración y Exposición de Métricas.  
+
+Feedback:
+- Desarrollamos la primera parte del proyecto, simple y sencillo para la visualizacion del jugador pero sin conocimiento de comandos a ejecutar por parte del jugador, como que escribir cuando requiere una ayuda.
+- Visualizacion monocromatico para todas las habitaciones.
+- No hay limite de tiempo para cada acertijo.
+- Logica ambigua para volver a escribir la respuesta correcta luego de un intento erroneo.
+- Mejora en la comunicacion cliente-servidor, y monitoreo con Grafana y Prometheus.
+
+## *Sprint 2*:  
+1. Dashboard en Grafana para Monitoreo.
+2. Agregar un botón de ayuda.  
+3. Agregar un cronómetro para cada habitación.
+4. Mostrar mensaje de bienvenida al jugador.
+5. Cambiar el color de fondo según la habitación.  
+  
+## *Sprint 3*:  
+1. Refactorización de Código  
+2. Despliegue en la nube usando netlify  
+  
+# Escritura de historias de usuario con Gherkin y pruebas automatizadas (Parte 2)  
+  
+
+
+  
+  
+
+# PC1- INFORME
 # Informe acerca de el trabajo realizado
 Vamos a desarrollar un juego de "Esacape ROOM" donde los jugadores deben resolver una serie de acertijos para escapar de un habitación virtual
 El juego consiste en habitaciones secuenciales, donde vamos a ir agregando paso a paso cada funcionalidad  
