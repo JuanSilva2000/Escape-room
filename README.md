@@ -24,7 +24,7 @@ Se hizo la definición de las historias de usuario del proyecto, y se les califi
   
 #### Planificación y organización de Sprints  
 Se decidió que el Proyecto se ha dividio en 3 sprints:  
--*Sprint 1*:  
+## *Sprint 1*:  
 1. Mostrar Acertijo  
 2. Digitar Respuesta.
 3. Respuesta Correcta de Acertijo.
@@ -32,15 +32,22 @@ Se decidió que el Proyecto se ha dividio en 3 sprints:
 5. Notificacion a Respuesta Incorrecta. 
 6. Implementación de Docker-compose. 
 7. Configuración y Exposición de Métricas.  
-  
-- *Sprint 2*:  
+
+Feedback:
+- Desarrollamos la primera parte del proyecto, simple y sencillo para la visualizacion del jugador pero sin conocimiento de comandos a ejecutar por parte del jugador, como que escribir cuando requiere una ayuda.
+- Visualizacion monocromatico para todas las habitaciones.
+- No hay limite de tiempo para cada acertijo.
+- Logica ambigua para volver a escribir la respuesta correcta luego de un intento erroneo.
+- Mejora en la comunicacion cliente-servidor, y monitoreo con Grafana y Prometheus.
+
+## *Sprint 2*:  
 1. Dashboard en Grafana para Monitoreo.
 2. Agregar un botón de ayuda.  
 3. Agregar un cronómetro para cada habitación.
 4. Mostrar mensaje de bienvenida al jugador.
 5. Cambiar el color de fondo según la habitación.  
   
-- *Sprint 3*:  
+## *Sprint 3*:  
 1. Refactorización de Código  
 2. Despliegue en la nube usando netlify
 
