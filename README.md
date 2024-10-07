@@ -24,8 +24,10 @@ Se hizo la definición de las historias de usuario del proyecto, y se les califi
 |          Agregar cronómetro         | Como jugador Quiero tener un límite de tiempo para resolver cada acertijo Para que el juego sea más desafiante | P1 | XL | 7 | En proceso | Silva y Ravichagua |
 |   Mensaje de bienvenida al jugador  | Como jugador Quiero ver una mensaje de bienvenida al iniciar el juego Para sentirme recibido y saber que el juego ha comenzado correctamente | P2 | XS | 2 | En proceso | Quispe |
 |      Cambiar el color de fondo      | Como jugador Quiero que el color de fondo cambie cada vez que entro en una nueva habitación Para hacer más visual y distintiva cada habitación en el juego | P2 | M | 2 | En proceso | Quispe |  
+| Refactorizacion del Codigo | Como desarrollador Quiero refactorizar el código de la aplicación Para mejorar la mantenibilidad, legibilidad y escalabilidad del proyecto | P1 | L | 3 | Backlog | Silva y Ravichagua|  
+| Despliegue de la Aplicación en la Nube usando Netlify | Como administrador Quiero desplegar la aplicación en la nube usando Netlify Para que la aplicación este disponible públicamente y sea accesible desde cualquier lugar | P2 | S | 3 | Backlog | Silva |  
     
-#### Planificación y organización de Sprints  
+## Planificación y organización de Sprints  
 Se decidió que el Proyecto se ha dividio en 3 sprints:  
 ## *Sprint 1*:  
 1. Mostrar Acertijo  
