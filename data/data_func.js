@@ -26,7 +26,13 @@ const procesarComando = (comando) => {
   }
 }
 
+const marcarCompletadoAcertijos = () => {
+  init_habitacion = Object.keys(habitaciones).length
+}
+
+
 module.exports = {
   getHabitacionActual,
-  procesarComando
+  procesarComando,
+  marcarCompletadoAcertijos
 }
