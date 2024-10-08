@@ -41,7 +41,7 @@ Given('que el jugador lee el acertijo de la primera habitacion', () => {
 })
 
 When('digite su respuesta', () => {
-  respuesta = data_funcs.procesarComando("mango");
+  respuesta = data_funcs.procesarComando("askjfnakj");
 })
 
 Then('el juego debe procesar su respuesta para mostrar un alert correspondiente', () => {
