@@ -47,7 +47,7 @@ Enfoque en la implementacion basica de las diferentes funcionalidades de acuerdo
 - Se podria mejorar en cuanto la interaccion con el jugador, como darle conocimiento de comandos y reglas.
 - Visualizacion monocromatico para todas las habitaciones.
 - Logica ambigua y redundante para volver a escribir la respuesta correcta luego de un intento erroneo.
-- Se llego a un analisis, mejorar los criterios de aceptacion de algunas historias de usuario, asi tambien agregar aquellas que no fueron discutidas ni estimadas.
+- Se llego a un analisis, mejorar los criterios de aceptacion de algunas historias de usuario.
 - El equipo planea equilibrar el testing de pruebas y mejora en codigo de produccion, asi mismo, mejorar la expectativa de las historias de usuario para el siguiente sprint.
 
 ## *Sprint 2*:  
@@ -210,7 +210,7 @@ Ramas usadas
 # Flujo de trabajo  
 Se hizo el desarrollo basado en troncales:  
 
-![](img/flujo1.png)
+![](img/flujo2.png)
   
 # Cómo iniciar la app:
 Para poder iniciar la aplicación debemos clonar el repositorio de nuestra aplicación para esto haremos el siguiente paso
