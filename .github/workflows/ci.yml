@@ -33,7 +33,7 @@ jobs:
         run: npm run test
       # Corre tests de cucumber
       - name: Run tests cucumber
-        run: npm test:cucumber
+        run: npm run test:cucumber
 
       # Audita las vulnerabilidades
       - name: Run npm audit
