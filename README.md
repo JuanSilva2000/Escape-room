@@ -61,7 +61,19 @@ Mejora de las funcionalidades e integracion de componentes.
 ## *Sprint 3*:
 Optimizacion, testeo de pruebas finales y preparacion para el despliegue.  
 1. Refactorización de Código  
-2. Despliegue en la nube usando netlify  
+2. Despliegue en la nube usando netlify
+
+
+
+### Monitoreo y control con burndown charts:
+Para este proyecto hemos creado burndown charts para una mejor visibilidad de los sprints. Esto nos va ayudar a tomar decisiones basado en los resultados mostrados en los sprints y en las estimaciones
+![](img/PC2/kanban.PNG)
+
+Para el sprint 1 tenemos el siguiente burndown charts para el sprint 1
+![](img/PC2/kanban2.PNG)
+
+Y para este caso podemos ver el burndown charts para el sprint 2
+![](img/PC2/kanban3.PNG)
   
 # Escritura de historias de usuario con Gherkin y pruebas automatizadas (Parte 2)  
   
