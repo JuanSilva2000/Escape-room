@@ -1,6 +1,6 @@
 Feature: Juego de Escape Room
 
-    Scenario: Recibir Pista
+    Scenario: Solicitud de Pista
         Given que el jugador esta resolviendo un acertijo
         When el jugador ingresa "ver pista"
         Then el sistema debe responder con una pista 
@@ -10,7 +10,7 @@ Feature: Juego de Escape Room
         When carga la pagina o avanza a otra habitacion
         Then debe mostrar el acertijo
           
-    Scenario: Digitar respuesta
+    Scenario: Digitar culaquier respuesta
         Given que el jugador lee el acertijo de la primera habitacion
         When digite su respuesta
         Then el juego debe procesar su respuesta para mostrar un alert correspondiente  
