@@ -29,7 +29,8 @@ Se hizo la definición de las historias de usuario del proyecto, y se les califi
     
 ## Planificación y organización de Sprints  
 Se decidió que el Proyecto se ha dividio en 3 sprints:  
-## *Sprint 1*:  
+## *Sprint 1*:
+Enfoque en la implementacion basica de las diferentes funcionalidades de acuerdo a las historias de usuario
 1. Mostrar Acertijo  
 2. Digitar Respuesta.
 3. Respuesta Correcta de Acertijo.
@@ -38,23 +39,41 @@ Se decidió que el Proyecto se ha dividio en 3 sprints:
 6. Implementación de Docker-compose. 
 7. Configuración y Exposición de Métricas.  
 
-Feedback:
-- Desarrollamos la primera parte del proyecto, simple y sencillo para la visualizacion del jugador pero sin conocimiento de comandos a ejecutar por parte del jugador, como que escribir cuando requiere una ayuda.
-- Visualizacion monocromatico para todas las habitaciones.
+### Feedback
+- Funcionalidades basicas con una buena logica para la jugabilidad.
+- Buena conexion entre cliente-servidor ,y monitoreo con Grafana y Prometheus.
 - No hay limite de tiempo para cada acertijo.
-- Logica ambigua para volver a escribir la respuesta correcta luego de un intento erroneo.
-- Mejora en la comunicacion cliente-servidor, y monitoreo con Grafana y Prometheus.
+- Enfoque centrado en el codigo de produccion dejando de lado el tiempo de prueba.
+- Se podria mejorar en cuanto la interaccion con el jugador, como darle conocimiento de comandos y reglas.
+- Visualizacion monocromatico para todas las habitaciones.
+- Logica ambigua y redundante para volver a escribir la respuesta correcta luego de un intento erroneo.
+- Se llego a un analisis, mejorar los criterios de aceptacion de algunas historias de usuario.
+- El equipo planea equilibrar el testing de pruebas y mejora en codigo de produccion, asi mismo, mejorar la expectativa de las historias de usuario para el siguiente sprint.
 
 ## *Sprint 2*:  
+Mejora de las funcionalidades e integracion de componentes.
 1. Dashboard en Grafana para Monitoreo.
 2. Agregar un botón de ayuda.  
 3. Agregar un cronómetro para cada habitación.
 4. Mostrar mensaje de bienvenida al jugador.
 5. Cambiar el color de fondo según la habitación.  
   
-## *Sprint 3*:  
+## *Sprint 3*:
+Optimizacion, testeo de pruebas finales y preparacion para el despliegue.  
 1. Refactorización de Código  
-2. Despliegue en la nube usando netlify  
+2. Despliegue en la nube usando netlify
+
+
+
+### Monitoreo y control con burndown charts:
+Para este proyecto hemos creado burndown charts para una mejor visibilidad de los sprints. Esto nos va ayudar a tomar decisiones basado en los resultados mostrados en los sprints y en las estimaciones
+![](img/PC2/kanban.PNG)
+
+Para el sprint 1 tenemos el siguiente burndown charts para el sprint 1
+![](img/PC2/kanban2.PNG)
+
+Y para este caso podemos ver el burndown charts para el sprint 2
+![](img/PC2/kanban3.PNG)
   
 # Escritura de historias de usuario con Gherkin y pruebas automatizadas (Parte 2)  
   
@@ -170,12 +189,6 @@ Por lo tanto a la hora de ejecutarlas, debería pasar todas las pruebas, garanti
 
 ![](img/PC2/test-resultado.png)
   
-
-
-
-  
-  
-
 # PC1- INFORME
 # Informe acerca de el trabajo realizado
 Vamos a desarrollar un juego de "Esacape ROOM" donde los jugadores deben resolver una serie de acertijos para escapar de un habitación virtual
@@ -209,7 +222,7 @@ Ramas usadas
 # Flujo de trabajo  
 Se hizo el desarrollo basado en troncales:  
 
-![](img/flujo1.png)
+![](img/flujo2.png)
   
 # Cómo iniciar la app:
 Para poder iniciar la aplicación debemos clonar el repositorio de nuestra aplicación para esto haremos el siguiente paso
