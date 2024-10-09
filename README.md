@@ -58,6 +58,119 @@ Feedback:
   
 # Escritura de historias de usuario con Gherkin y pruebas automatizadas (Parte 2)  
   
+Se utilizó cucumber para la ejecución de pruebas automatizadas, requerimos de la siguiente dependencia:  
+ 
+```  
+    npm install --save-dev @cucumber/cucumber 
+```  
+
+Además de añadir un script en el package.json para especificar con qué comandos ejecutamos las pruebas  
+  
+```  
+    "scripts": {
+        "test:cucumber": "cucumber-js"
+    }
+```  
+ 
+Además de seguir la siguiente estructura:
+```  
+    └── 📁feature
+        | └── 📁step_definitions
+        |       └──escape_room_steps.js        
+        |____ escape_room.feature 
+```  
+  
+Ahora se implementa los escenarios respectivos en un feature: 
+![](img/PC2/features.png) 
+  
+
+Implementa la lógica para cada uno de los pasos de los escenarios descritos en los archivos .feature de Cucumber.  
+
+```javascript
+const { Given, When, Then } = require('@cucumber/cucumber');
+const assert = require('assert');
+const data_funcs = require('../../data/data_func');
+
+let respuesta;
+let habitacionActual;
+
+// Escenario: Recibir Pista
+Given('que el jugador esta resolviendo un acertijo', () => {
+  return
+})
+
+When('el jugador ingresa {string}', (comando) => {
+    if(comando === "ver pista"){
+        this.respuesta = data_funcs.procesarComando(comando)
+    }
+})
+
+Then('el sistema debe responder con una pista', () => {
+  const pistaEsperada = "Es una fruta"; 
+  assert.strictEqual(this.respuesta.alerta,pistaEsperada)
+})
+
+// Escenario: Mostrar acertijo
+Given('que el jugador está en una habitación', () => {
+  return
+})
+
+When('carga la pagina o avanza a otra habitacion', () => {
+  habitacionActual = data_funcs.getHabitacionActual()
+})
+
+Then('debe mostrar el acertijo', () => {
+  const acertijoEsperado = "Soy blanco por dentro y verde por fuera ¿Qué soy?"
+  assert.strictEqual(habitacionActual.acertijo, acertijoEsperado)
+})
+
+// Escenario: Digitar respuesta incorrecta
+Given('que el jugador lee el acertijo de la primera habitacion', () => {
+  return
+})
+
+When('digite una respuesta incorrecta', () => {
+  respuesta = data_funcs.procesarComando("askjfnakj");
+})
+
+Then('el juego debe procesar su respuesta para mostrar un alert correspondiente', () => {
+  const alertaEsperada = respuesta.alerta
+  assert.ok(alertaEsperada.includes("Comando incorrecto"))
+})
+
+// Escenario: Respuesta correcta de acertijo
+Given('que el jugador ha respondido correctamente', () => {
+  return
+})
+
+When('la respuesta es procesada', () => {
+  respuesta = data_funcs.procesarComando("pera") 
+})
+
+Then('el jugador recibe una notificacion y avanza de habitacion', () => {
+  const alertaEsperada = "Respuesta correcta. Avanzaste a la siguiente habitación ^_^"
+  assert.strictEqual(respuesta.alerta, alertaEsperada)
+})
+  
+// Esceneario: Juego completado
+Given('que el jugador ha resuelto todos los acertijos', () => {
+  data_funcs.marcarCompletadoAcertijos()
+})
+
+When('se procesa la ultima respuesta correcta', () => {
+  respuesta = data_funcs.procesarComando("promesa")
+})
+
+Then('el sistema debe mostrar un mensaje de felicitaciones', () => {
+  const mensajeEsperado = "Felicidades!!! Has escapado de todas las habitaciones :D"
+  assert.strictEqual(respuesta.alerta, mensajeEsperado)
+})
+```  
+Por lo tanto a la hora de ejecutarlas, debería pasar todas las pruebas, garantizando que se cumplen con los requisitos de negocio  
+
+![](img/PC2/test-resultado.png)
+  
+
 
 
   
@@ -94,7 +207,8 @@ Ramas usadas
   
     
 # Flujo de trabajo  
-Se hizo el desarrollo basado en troncales:   
+Se hizo el desarrollo basado en troncales:  
+
 ![](img/flujo1.png)
   
 # Cómo iniciar la app:
@@ -234,8 +348,10 @@ Se puede ver la logica de como adquirimos la respuesta a la pregunta realizada p
 Asimismo la actualizacion del Frontend, de manera como realiza correcta o incorrectamente las respuestas del jugador, tal objeto que nos señala `numero-hab`.
 ![](img/numero-hab.png)
 
-## 2: Submódulo CSS
-Aqui obtenemos el diseño del Frontend para una mayor visualizacion e interaccion con el jugador.
+## 2: Submódulo CSS  
+
+Aqui obtenemos el diseño del Frontend para una mayor visualizacion e interaccion con el jugador.  
+
 ![](img/css.png)
 
 No hay mucho que comentar de una plantilla de diseño donde es subjetivo.
@@ -255,7 +371,8 @@ Capturamos la respuesta introducida por el jugador dado la siguiente linea.
 Añadimos un `listener` para el evento de `keydown` de la respuesta antes guardada, asi cada vez que una tecla (en este caso `Enter`) sea presionada se ejecute la funcion propocionada.  
 
 Realiza una solicitud POST a la URL dada, procesa la respuesta y suelta una alerta de exito o de fracaso. 
-Tambien actualizamos como anteriormente mencionamos con un `fecth` mediante una solicitud GET para la nueva informacion del juego y finalmente limpiamos el campo de entrada.
+Tambien actualizamos como anteriormente mencionamos con un `fecth` mediante una solicitud GET para la nueva informacion del juego y finalmente limpiamos el campo de entrada.  
+
 ![](img/listener.png)
 
 ## 4: Módulo Test
