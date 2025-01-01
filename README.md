@@ -1,3 +1,35 @@
+# JUGABILIDAD
+## Juego - Interfaz
+Veremos al iniciar el proyecto, tendremos la interfaz completa para poder jugar y recibir respuestas.
+![](img/Interfaz-Juego.png)  
+
+Con el respectivo numero de habitacion y para recibir la respuesta del acertijo propuesto. Podemos responder de diferentes maneras para poder ver la funcionalidad y la respuesta de nuestro juego.
+
+### Respuesta Correcta
+Veremos que saldra un resultado si respondemos de manera correta al acertijo, avanzaras a la siguiente habitacion con un acertijo nuevo y desafiante.
+![](img/RespuestaCorrecta.png)
+
+### Respuesta Incorrecta
+Veremos que nos responde con el siguiente mensaje, limpia la consola para la nueva respuesta.
+![](img/RespuestaIncorrecta.png)
+
+### Ver Pista
+Implementamos un comodin para cada acertijo donde podras tener una descripcion no tan cercana a la respuesta.
+Primero tendras que escribir `ver pista` para esta opcion.
+![](img/ComandoPista.png)
+![](img/VerPista.png)
+
+### Fin del Juego
+Finalmente, al responder correctamente todas las respuesta, obtendras un mensaje que has escapado exitosamente de las habitaciones.
+![](img/FinJuego.png)  
+  
+
+## Desarrolladores  
+  
+- [Juan Silva](https://github.com/JuanSilva2000)
+- [Diego Quispe](https://github.com/diegosqa)  
+- [Manuel Ravichagua](https://github.com/ravigod22)
+    
 # PC2 - INFORME  
 ## Github, Scrum (Parte 1):  
 Se creo un tablero kanban con el nombre de Escape - Room:  
@@ -454,27 +486,4 @@ La instalación de esta dependecia se hace mendiante:
   
 ![](img/test-backend-2.png)
 
-# JUGABILIDAD
-## Juego - Interfaz
-Veremos al iniciar el proyecto, tendremos la interfaz completa para poder jugar y recibir respuestas.
-![](img/Interfaz-Juego.png)  
 
-Con el respectivo numero de habitacion y para recibir la respuesta del acertijo propuesto. Podemos responder de diferentes maneras para poder ver la funcionalidad y la respuesta de nuestro juego.
-
-### Respuesta Correcta
-Veremos que saldra un resultado si respondemos de manera correta al acertijo, avanzaras a la siguiente habitacion con un acertijo nuevo y desafiante.
-![](img/RespuestaCorrecta.png)
-
-### Respuesta Incorrecta
-Veremos que nos responde con el siguiente mensaje, limpia la consola para la nueva respuesta.
-![](img/RespuestaIncorrecta.png)
-
-### Ver Pista
-Implementamos un comodin para cada acertijo donde podras tener una descripcion no tan cercana a la respuesta.
-Primero tendras que escribir `ver pista` para esta opcion.
-![](img/ComandoPista.png)
-![](img/VerPista.png)
-
-### Fin del Juego
-Finalmente, al responder correctamente todas las respuesta, obtendras un mensaje que has escapado exitosamente de las habitaciones.
-![](img/FinJuego.png)
